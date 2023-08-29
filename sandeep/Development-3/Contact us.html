@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .bg {
+            border: 5px solid rgb(22, 145, 193);
+            display: flex;
+            justify-content: center;
+            background-image: url(phone\ 234.jpg);
+
+            height:100vh;
+            width: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        td,tr {
+         color:black;
+         margin-top: 10vh;
+         padding: 10px;
+         font-weight: bolder;
+         font-size:medium;
+        }
+        
+       
+        
+    </style>
+</head>
+<body>
+    <div class="bg">
+      
+        <form action="ContactSuccess.html"  onsubmit="return validateForm()">
+           
+            <table align="center">
+                <h1 align="center"><strong style="color:white; text-shadow: 6px 6px 6px red;">CONTACT US</strong></h1>
+                <tr>
+                    <td>Full name:</td>
+                    <td><input type="text" placeholder="Full name" name="fname" id="fname"><p></p></td>
+                </tr>
+                <tr>
+                    <td>PhoneNumber:</td>
+                    <td><input type="tel" name="phone" id="phone" placeholder="enter the PhoneNumber" pattern="[6-9]{1}[0-9]{9}" maxlength="10"  style="color: black;" required ></td>
+                </tr>
+                <tr>
+                    <td>Email:</td>
+                    <td><input type="email" id="email" placeholder="Please enter Email" name="email" required><p></p></td>
+                </tr>
+                <tr>
+                    <td>ADDRESS:</td>
+                    <td><input type="text" placeholder="Enter Address" name="Address"  id="address"><p></p></td>
+                </tr>
+                <tr>
+                    <td>DISTRICT</td>
+                    <td><input type="text" placeholder="Please enter your district" name="district" id="district"><p></p></td>
+                </tr>
+                <tr>
+                    <td>CITY:</td>
+                    <td><input type="city" placeholder="Enter city" name="city"  id="city"><p></p></td>
+                </tr>
+                <tr>
+                    <td>Message:</td>
+                    <td><textarea id="message" name="message" cols="23" rows="3" class="message-box" id="message"></textarea><p></p></td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center">
+                        <input type="submit" value="submit" class="btn btn-danger">
+                    </td>
+                </tr>
+            </table>
+        </form>
+        </div>
+        <script>
+            function validateForm() {
+              const username = document.getElementById('fname').value;
+              const phone = document.getElementById('phone').value;
+              const email = document.getElementById('email').value;
+              const addrss = document.getElementById('address').value;
+              const District = document.getElementById('district').value;
+              const city = document.getElementById('city').value;
+              const message = document.getElementById('message').value;
+              if(username.length < 4 || username.length > 20){
+                alert("ente a valid name and name must 4 letters to 20 letters");
+                return false;
+              }
+              else if(phone.length<10){
+                alert("ente a valid phone number and number must 0 letters to 10 numbers");
+                return false;
+              }
+              else if(!validateEmail(email)){
+                alert("Invalid email format , email must @ and . contains");
+                  return false;
+              }
+              else if(addrss.length<=4){
+                alert("Invalid address");
+                  return false;
+              }
+              else if(District.length<4){
+                alert("ente a valid district name ");
+                return false;
+              }
+              else if(city.length<4){
+                alert("ente a valid city name ");
+                return false;
+              }
+              else if(message.length<4){
+                alert("ente a valid message name ");
+                return false;
+              }
+             
+              return true;
+            }
+        
+            function validateEmail(email) {
+              // A simple email validation regular expression
+              const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+              return emailPattern.test(email);
+            }
+          </script>
+        
+    <!-- <script>
+        function validateForm(form) {
+            var fullName = document.forms["contactForm"]["fname"].value;
+            var phoneNumber = document.forms["contactForm"]["phone"].value;
+            var email = document.forms["contactForm"]["email"].value;
+            var address = document.forms["contactForm"]["Address"].value;
+            var district = document.forms["contactForm"]["district"].value;
+            var city = document.forms["contactForm"]["city"].value;
+            var message = document.forms["contactForm"]["message"].value;
+    
+            if (fullName.length <3) {
+                alert("Full name must be filled out");
+                return false;
+            }
+    
+            else if (phoneNumber.length<0) {
+                alert("Phone number must be filled out");
+                return false;
+            }
+    
+            else if (phoneNumber.length !== 10) {
+                alert("Phone number must have exactly 10 digits");
+                return false;
+            }
+    
+            else if (email === "") {
+                alert("Email must be filled out");
+                return false;
+            }
+    
+            else if (address === "") {
+                alert("Address must be filled out");
+                return false;
+            }
+    
+            else if (district === "") {
+                alert("District must be filled out");
+                return false;
+            }
+    
+           else  if (city === "") {
+                alert("City must be filled out");
+                return false;
+            }
+    
+            else if (message === "") {
+                alert("Message must be filled out");
+                return false;
+            }
+            return true;
+        }
+
+    
+
+</script> -->
+
+
+</body>
+</html>

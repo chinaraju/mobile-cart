@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<style>
+  /* Reset some default styles */
+  body, h1, h2, p, ul, li {
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Basic styling */
+  body {
+    background-image: url("5605216.jpg");
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    /* inline-size: 1.6; */
+  }
+
+  .container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  /* Media queries for responsiveness */
+  @media screen and (max-width: 768px) {
+    .container {
+      padding: 10px;
+    }
+  }
+
+  /* About Us section with background image */
+  .about-section {
+    background-image: url('background.jpg');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    color: black;
+    padding: 20px 0;
+  }
+
+  /* Vision and Mission section */
+  .vision-mission {
+    text-align: center;
+    padding: 20px 0;
+  }
+
+  /* Services section */
+  .services-section {
+    text-align: center;
+    padding: 20px 0;
+  }
+
+  .services-section h2 {
+    margin-bottom: 50px;
+  }
+
+  /* .service-item {
+    display:block;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    font-weight:bolder ;
+  } */
+
+  .service-item img {
+    max-width: 100%;
+    height:30vh;
+    margin-bottom: 10px;
+  }
+  .social{
+    text-align: center;
+   }
+   .about-section h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+
+  .about-section p {
+    font-size: 1.25rem;
+    line-height: 1.6;
+  }
+
+  .vision-mission h2,
+  .services-section h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 50px;
+  }
+
+  .service-item h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  .service-item  {
+    font-size: 1.125rem;
+    line-height: 1.5;
+   
+  }
+  .service-image {
+    width: 100%;
+    height: 500px; /* Adjust the height as needed */
+    object-fit: cover;
+    
+  }
+  p{
+    color:rgb(7, 22, 236);
+    font-weight:bolder;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+  h3{
+    font-weight: bold;
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="about-section">
+      <h1>About Us</h1>
+      <p>Welcome to view mobile store! We offer the latest and greatest mobile devices to suit your needs.</p>
+      </div>
+    <div class="vision-mission">
+      <h2>Vision and Mission</h2>
+      <p>Our vision is to provide top-quality mobile devices and services to our customers, 
+        ensuring their satisfaction and loyalty. 
+        Our mission is to be a trusted partner in the mobile industry, 
+        offering innovative solutions that enhance our customers' lives.</p>
+    </div>
+    <div class="services-section">
+
+     <h2 style="color:black;">Our Services</h2>  
+  <div class="row">
+    <div class="col-md-4">
+      <div class="service-item">
+        <h3>Mobile Devices Sales</h3><br>
+       <marquee> <img class="service-image" src="https://media.istockphoto.com/id/490910270/photo/testing-smartphone.jpg?s=612x612&w=0&k=20&c=N3j29I1DmQ1Yt1Y6ykg2m3yMRHb5qWADj4dw3AlzqjI=" alt="Mobile Devices Sales"></marquee>
+        <p>Discover an extensive range of cutting-edge mobile devices from industry-leading brands. 
+          Whether you're looking for the latest flagship models or budget-friendly options, 
+          we have the perfect device to match your style and needs. 
+          Our knowledgeable staff is here to assist you in finding the ideal mobile solution that enhances your communication, productivity, 
+          and entertainment experiences.</p>
+        
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="service-item">
+        <h3>Device Repairs</h3><br>
+        <marquee><img class="service-image" src="https://t4.ftcdn.net/jpg/01/07/50/01/360_F_107500164_rwndmChhmlkuzaLOdorIzSwCxLNTjg2R.jpg" alt="Device Repairs"></marquee>
+        <p>
+          Is your device acting up? Our expert technicians can diagnose and repair a wide range of mobile device issues.
+          From cracked screens to battery replacements, we're dedicated to restoring your device to optimal performance. 
+          Our swift and reliable repair services ensure that you're back to enjoying your device in no time.
+        </p>
+       </div>
+    </div>
+    <div class="col-md-4">
+      <div class="service-item">
+        <h3>Accessory Sales</h3><br>
+        <marquee><img class="service-image" src="https://img.freepik.com/free-vector/set-graphic-phone-accessories-flat-illustration_74855-16250.jpg?w=1060&t=st=1692679431~exp=1692680031~hmac=e079698145a5daaa3c0b81bdda5321e83b717e5bdc9e71912cbf6c46bf24dd91" width="291px" height="200vh"   alt="Accessory Sales"></marquee>
+          
+        <p>Enhance your mobile experience with our diverse collection of accessories. Choose from stylish cases,
+          high-quality screen protectors, ergonomic headphones, and more.
+          Our accessories not only protect your device but also elevate your style and functionality.
+          Explore our range to find the perfect complement for your mobile device.</p>
+        
+      </div>
+    </div>
+  </div>
+</div>
+<div class="social">
+    <p>
+      <a href="https://www.facebook.com/" class="btn btn-primary"  style="margin-right: 200px;" target="_self">Connect on facebook
+        
+       <!-- <i class="fab fa-facebook"></i> Connect on facebook -->
+      </a>
+      <a href="https://twitter.com/" class="btn btn-primary" target="_self">Connect on Twitter 
+        <!-- <i class="fab fa-twitter"></i> Connect on Twitter -->
+      </a>
+    </p>
+    
+  </div>
+</div>
+</body>
+</html>

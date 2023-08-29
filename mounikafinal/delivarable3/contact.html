@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<style>
+    h1{
+        
+        color: blueviolet;
+        text-align: center;
+    }
+    body{
+        background-image: url("./photo-1511707171634-5f897ff02aa9.jfif");
+        background-size: cover;
+        background-repeat: no-repeat;
+
+    }
+    
+</style>
+<script>
+  function myValidate()
+  {
+    let x=document.forms["myForm"]["fname"].value;
+    let y=document.forms["myForm"]["mn"].value;
+    let z=document.forms["myForm"]["email"].value;
+    let z1=document.forms["myForm"]["message"].value;
+    if(x.length<3)
+    {
+      alert("please enter the valid name");
+      return false;
+    }
+    if(y.length<10 )
+    {
+      alert("please enter the 10 digit mobile number");
+      return false;
+    }
+    // else if (!myValidate(z)) {
+    //     alert("Invalid email format");
+    //     return false;
+    //   }
+
+      
+    // function myValidate(z) {
+    //   // A simple email validation regular expression
+    //   const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    //   return emailPattern.test(email);
+    // }
+    if(z1.length<10)
+    {
+      alert("please enter the valid message as mininmum 10 characters");
+      return false;
+    }
+    return true;
+
+
+  }
+
+</script>
+<body>
+    <h1>Contact us</h1>
+    <form name="myForm" action="./contact1.html" class="row g-3" onsubmit="return myValidate()">
+          
+    <div class="container">
+        
+          <div class="col-md-4">
+            <label for="validationServer01" class="form-label">Full Name:</label>
+            <input type="text" class="form-control"  id="fname" name="fname" placeholder="Enter full name" required>
+            
+          </div>
+          <br>
+          <br>
+          <br>
+          <div class="col-md-4">
+            <label for="validationServer03" class="form-label">Email:</label>
+            <input type="email" name="email" name="email" class="form-control" id="validationServer03" aria-describedby="validationServer03Feedback" required placeholder="Enter email">
+            
+          </div>
+         <br>
+         <br>
+         <br>
+          <div class="col-md-4">
+            <label for="validationServer03" class="form-label">Mobile number:</label>
+            <input type="number" name="mn" name="mn" class="form-control" id="validationServer03" aria-describedby="validationServer03Feedback" required placeholder="Enter mobile number">
+            
+          </div>
+          <br>
+         <br>
+         <br>
+         <br>
+          <div class="col-md-4">
+            <label for="validationServer03" class="form-label">Message:</label>
+            <textarea class="form-control"rows="4" name="message" cols="25" value="Message" placeholder="Enter Message"></textarea>
+            
+          </div>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <div class="col-12">
+            <button class="btn btn-primary" value="submit">Send</button>
+          </div>
+    </div>
+    </form>
+</body>
+</html>

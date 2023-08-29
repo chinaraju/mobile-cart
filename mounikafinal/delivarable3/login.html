@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        h1{
+            text-align: center;
+            color: blueviolet;
+            font-weight: bolder;
+        }
+        body{
+          background-image: url("./1.webp");
+          background-size: cover;
+          background-repeat: no-repeat;
+          
+        }
+        
+       
+    </style>
+    <script>
+    function validateForm() {
+        let x = document.forms["myForm"]["fname"].value;
+        let password=document.forms["myForm"]["password"].value;
+        if (x.length <=3) {
+          alert("Name must be filled out");
+          return false;
+        }
+        else if(password.length<=4){
+          alert("password must be greater then 4 digit");
+          return false;
+        }
+      }
+    
+      </script>
+    
+    
+    
+</head>
+
+<body>
+    <h1>Login</h1>
+    
+    <div class="container">
+      <form  class="row g-3" action="./loginsucess.html" onsubmit="return validateForm()"name="myForm" method="post">
+      <div class="col-md-4">
+            <label>Enter Username</label>
+           
+            <div class="input-group has-validation">
+                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                <input type="text" class="form-control" name="fname" id="name" placeholder="Enter your Username" required>
+            </div>
+            </div>
+            <br>
+            <br><br>
+            <div class="col-md-4">
+            <label>Enter Password</label>
+            <div class="input-group has-validation">
+                <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                <input id="password" type="password" class="form-control" name="password" placeholder=" Enter your Password" required>
+            </div>
+            </div>
+            <br>
+            <br>
+            <br>
+            <br>
+            <div class="col-12">
+                <button class="btn btn-primary" value="submit" >Login</button>
+              </div>
+   
+
+      </div>
+    </form>
+    </div>
+</body>
+</html>
